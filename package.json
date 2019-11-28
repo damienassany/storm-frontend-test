@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
+    "@storybook/addon-a11y": "^5.2.6",
     "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addon-storyshots": "^5.2.6",
@@ -38,7 +39,7 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"node api\"",
+    "start": "concurrently \"PORT=8080 react-scripts start\" \"node api\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
