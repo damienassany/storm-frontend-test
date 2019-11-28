@@ -22,14 +22,18 @@
     "@babel/core": "^7.7.4",
     "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
+    "@storybook/addon-storyshots": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@types/react": "16.9.13",
     "@types/react-dom": "16.9.4",
+    "@types/storybook__addon-storyshots": "^5.1.2",
     "babel-loader": "^8.0.6",
-    "concurrently": "^4.0.1"
+    "concurrently": "^4.0.1",
+    "react-test-renderer": "^16.12.0",
+    "require-context.macro": "^1.2.2"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node api\"",
