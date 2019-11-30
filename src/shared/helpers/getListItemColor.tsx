@@ -1,17 +1,25 @@
 export enum Importances {
-    Low,
+    High,
     Medium,
-    High
+    Low
 }
 
-// TODO tests
 export const getListItemColor = (importance: Importances) => {
     switch (importance) {
         case Importances.Low:
-            return "green";
+            return {
+               background: "#ebf6fa",
+               border: "#b3e6fb"
+            };
         case Importances.Medium:
-            return "yellow";
+            return {
+                background: "#fbf4dd",
+                border: "#fde9a7"
+            };
         case Importances.High:
-            return "red";
+            return {
+                background: "#faebec",
+                border: "#fbb3b3"
+            };
     }
 };

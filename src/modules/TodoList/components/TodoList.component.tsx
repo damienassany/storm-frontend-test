@@ -1,20 +1,27 @@
-import React, { useEffect } from 'react';
-import { TodoListProps } from '../containers/TodoList.container';
-import { observer } from 'mobx-react';
- 
-export const TodoList = observer((props) => {
-    const {
-        fetchTasks,
-        tasks
-    } = props as TodoListProps;
+import React, { useEffect } from "react";
+import { TodoListProps } from "../containers/TodoList.container";
+import { observer } from "mobx-react";
+import { ListItem } from "../../../shared/components/ListItem/ListItem.component";
+import styled from "styled-components";
 
-    useEffect(fetchTasks, []);
+const List = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+`;
 
-    return (
-        <ul>
-            { tasks.map(task => (
-                <li key={task.id}>{task.title}</li>
-            )) }
-        </ul>
-    );
-})
+export const TodoList = observer(props => {
+  const { fetchTasks, tasks } = props as TodoListProps;
+
+  useEffect(fetchTasks, []);  
+
+  return (
+    <List>
+      {tasks.map(task => (
+        <li key={task.id}>
+          <ListItem item={task} onCheck={() => null} onUncheck={() => null} />
+        </li>
+      ))}
+    </List>
+  );
+});

@@ -1,8 +1,8 @@
 class Requester {
     private url = "http://localhost:4000";
 
-    public get<T>(url: string): Promise<T> {
-        return fetch(`${this.url}${url}`).then(res => res.json());
+    public get<T>(url: string) {
+        return fetch(`${this.url}${url}`).then<T>(res => res.json());
     }
 }
 
