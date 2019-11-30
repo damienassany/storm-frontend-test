@@ -40,4 +40,13 @@ export class Service<T> {
             callback(res);
         });
     }
+
+    public delete = (id: string, callback: (res: any) => void) => {
+        this.showLoader();
+
+        requester.delete(`/api/${this.modelName}/${id}`).then(res => {
+            this.hideLoader();
+            callback(res);
+        });
+    } 
 } 

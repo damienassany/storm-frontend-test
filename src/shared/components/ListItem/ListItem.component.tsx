@@ -16,6 +16,7 @@ export type ItemFromApi = Omit<Item, "isDone"> & {
 export type Props = {
   item: Item;
   update(id: string, data: Partial<ItemFromApi>): void;
+  deleteTask(id: string): void;
 };
 
 const Title = styled.p`
@@ -54,7 +55,13 @@ const Wrapper = styled.div<{ importance: Importances; isDone: boolean }>`
   }
 `;
 
-export const ListItem: React.FC<Props> = ({ item, update }) => {
+const DeleteButton = styled.button`
+  align-self: flex-end;
+  position: absolute;
+  right: 30px;
+`;
+
+export const ListItem: React.FC<Props> = ({ item, update, deleteTask }) => {
   const onClick = React.useCallback(() => {
     const data = {
       isDone: Boolean(!item.isDone).toString()
@@ -71,6 +78,10 @@ export const ListItem: React.FC<Props> = ({ item, update }) => {
         {item.isDone && <i className="material-icons">check</i>}
       </Checkbox>
       <Title> {item.title} </Title>
+
+      <DeleteButton onClick={() => deleteTask(item.id)}>
+        <i className="material-icons">delete</i>
+      </DeleteButton>
     </Wrapper>
   );
 };

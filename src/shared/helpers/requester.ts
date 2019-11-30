@@ -24,6 +24,15 @@ class Requester {
             }
         }).then(res => res.json());
     }
+
+    public delete(url: string) {
+        return fetch(`${this.url}${url}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json());
+    }
 }
 
 const requester = new Requester();

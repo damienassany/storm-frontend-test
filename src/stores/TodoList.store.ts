@@ -34,6 +34,11 @@ export class TodoListStore {
   updateTask = (id: string, task: Item) => {
     this.tasks[id] = task;
   };
+
+  @action
+  deleteTask = (id: string) => {
+    delete this.tasks[id];
+  }
 }
 
 const todoListStore = new TodoListStore();
