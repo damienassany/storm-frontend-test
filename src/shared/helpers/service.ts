@@ -31,4 +31,13 @@ export class Service<T> {
             callback(res);
         });
     }
+
+    public create = (data: Partial<T>, callback: (res: any) => void) => {
+        this.showLoader();
+
+        requester.post<T>(`/api/${this.modelName}`, data).then(res => {
+            this.hideLoader();
+            callback(res);
+        });
+    }
 } 
