@@ -4,16 +4,31 @@ import { todoListStore } from "../../stores/TodoList.store";
 export class Service<T> {
     constructor(public modelName: string) {}
 
-    public getAll(callback: (res: T[]) => void) {
+    public hideLoader = () => {
+        setTimeout(() => {
+            todoListStore.updateLoading(false);
+        }, 500);
+    };
+
+    public showLoader = () => {
         todoListStore.updateLoading(true);
+    }
+
+    public getAll = (callback: (res: T[]) => void) => {
+        this.showLoader();
         
         requester.get<T[]>(`/api/${this.modelName}`).then(res => {
-            todoListStore.updateLoading(false);
+            this.hideLoader();
             callback(res);
         });
     }
 
-    public get(id: string) {
-        return requester.get<T>(`/api/${this.modelName}/${id}`);
+    public update = (id: string, data: Partial<T>, callback: (res: T) => void) => {
+        this.showLoader();
+
+        requester.patch<T>(`/api/${this.modelName}/${id}`, data).then(res => {
+            this.hideLoader();
+            callback(res);
+        });
     }
 } 

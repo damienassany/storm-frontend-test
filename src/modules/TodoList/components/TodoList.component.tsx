@@ -11,7 +11,7 @@ const List = styled.ul`
 `;
 
 export const TodoList = observer(props => {
-  const { fetchTasks, tasks } = props as TodoListProps;
+  const { fetchTasks, tasks, update } = props as TodoListProps;
 
   useEffect(fetchTasks, []);
 
@@ -19,7 +19,7 @@ export const TodoList = observer(props => {
     <List>
       {tasks.map(task => (
         <li key={task.id}>
-          <ListItem item={task} onCheck={() => null} onUncheck={() => null} />
+          <ListItem item={task} update={update} />
         </li>
       ))}
     </List>

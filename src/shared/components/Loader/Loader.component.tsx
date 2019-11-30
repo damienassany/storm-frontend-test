@@ -5,8 +5,8 @@ import styled from "styled-components";
 import { observer } from 'mobx-react';
 
 const LottieWrapper = styled.div<{ loading: boolean; }>`
-  transform: scale(${props => props.loading ? 1 : 0});
-  height: ${props => props.loading ? 30 : 0};
+  transform: scale(${props => props.loading ? 1 : 0.5});
+  opacity: ${props => props.loading ? 1 : 0};
   transition: all .2s;
 `;
 

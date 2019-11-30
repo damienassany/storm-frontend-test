@@ -4,8 +4,7 @@ import { ListItem, Props, Item } from './ListItem.component';
 import { Importances } from '../../helpers/getListItemColor';
 
 const createProps = (item: Omit<Item, "id"|"title">): Props => ({
-    onCheck: () => null,
-    onUncheck: () => null,
+    update: () => null,
     item: {
         ...item,
         id: '1111-2222-3333-4444',

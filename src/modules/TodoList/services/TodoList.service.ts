@@ -16,7 +16,13 @@ class TodoListService extends Service<ItemFromApi> {
 
             todoListStore.updateTasks(tasks);
         });
-    }
+    };
+
+    public updateTask = (id: string, data: Partial<ItemFromApi>) => {
+        this.update(id, data, task => {
+            todoListStore.updateTask(id, {...task, isDone: task.isDone === "true"});
+        });
+    };
 }
 
 const todoListService = new TodoListService();

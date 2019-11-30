@@ -9,14 +9,13 @@ export type Item = {
   id: string;
 };
 
-export type ItemFromApi = Item & {
+export type ItemFromApi = Omit<Item, "isDone"> & {
   isDone: string;
 };
 
 export type Props = {
   item: Item;
-  onCheck(id: string): void;
-  onUncheck(id: string): void;
+  update(id: string, data: Partial<ItemFromApi>): void;
 };
 
 const Title = styled.p`
@@ -55,17 +54,20 @@ const Wrapper = styled.div<{ importance: Importances; isDone: boolean }>`
   }
 `;
 
-export const ListItem: React.FC<Props> = ({ item, onCheck, onUncheck }) => {
-  const callback = React.useCallback(
-    () => (item.isDone ? onCheck(item.id) : onUncheck(item.id)),
-    [item.isDone]
-  );
+export const ListItem: React.FC<Props> = ({ item, update }) => {
+  const onClick = React.useCallback(() => {
+    const data = {
+      isDone: Boolean(!item.isDone).toString()
+    };
+
+    update(item.id, data);
+  }, [item.isDone]);
 
   const title = item.isDone ? "Uncheck" : "Check";
 
   return (
     <Wrapper importance={item.importance} isDone={item.isDone}>
-      <Checkbox title={title} onClick={() => callback()}>
+      <Checkbox title={title} onClick={onClick}>
         {item.isDone && <i className="material-icons">check</i>}
       </Checkbox>
       <Title> {item.title} </Title>
