@@ -3,6 +3,14 @@ import { Item } from "../shared/components/ListItem/ListItem.component";
 
 export class TodoListStore {
     @observable
+    loading: boolean = false;
+
+    @action
+    updateLoading(loading: boolean) {
+        this.loading = loading;
+    }
+
+    @observable
     tasks: Item[] = [];
 
     @action

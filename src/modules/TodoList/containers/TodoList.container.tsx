@@ -10,8 +10,8 @@ export type TodoListProps = {
 };
 
 const mapStoreToProps = (stores: Stores): TodoListProps => ({
-    tasks: stores.todoListStore.tasks!,
-    fetchTasks: todoListService.fetchTasks!
+    tasks: stores.todoListStore.tasks,
+    fetchTasks: todoListService.fetchTasks
 });
 
 export const TodoListContainer = inject(mapStoreToProps)(TodoList);

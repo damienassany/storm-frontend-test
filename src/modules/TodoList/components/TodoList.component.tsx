@@ -13,7 +13,7 @@ const List = styled.ul`
 export const TodoList = observer(props => {
   const { fetchTasks, tasks } = props as TodoListProps;
 
-  useEffect(fetchTasks, []);  
+  useEffect(fetchTasks, []);
 
   return (
     <List>

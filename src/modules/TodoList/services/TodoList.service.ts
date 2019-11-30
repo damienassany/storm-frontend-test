@@ -7,8 +7,8 @@ class TodoListService extends Service<ItemFromApi> {
         super('task');
     }
 
-    public fetchTasks = () => {
-        this.getAll().then(_tasks => {
+    public fetchTasks = () => {        
+        this.getAll(_tasks => {
             const tasks = _tasks.map(task => ({
                 ...task,
                 isDone: task.isDone === "true"
