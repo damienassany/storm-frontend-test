@@ -33,6 +33,12 @@ class TodoListService extends Service<ItemFromApi> {
             addTodoFormStore.updateImportance("");
         });
     }
+
+    public deleteTask = (id: string) => {
+        this.delete(id, () => {
+            todoListStore.deleteTask(id);
+        })
+    }
 }
 
 const todoListService = new TodoListService();

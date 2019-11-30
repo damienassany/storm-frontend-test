@@ -8,12 +8,14 @@ export type TodoListProps = {
   tasks: Item[];
   fetchTasks(): void;
   update(id: string, data: Partial<ItemFromApi>): void;
+  delete(id: string): void;
 };
 
 const mapStoreToProps = (stores: Stores): TodoListProps => ({
     tasks: stores.todoListStore.tasksAsArray,
     fetchTasks: todoListService.fetchTasks,
-    update: todoListService.updateTask
+    update: todoListService.updateTask,
+    delete: todoListService.deleteTask
 });
 
 export const TodoListContainer = inject(mapStoreToProps)(TodoList);

@@ -5,3 +5,195 @@ exports[`Storyshots App Default 1`] = `
   App story is working
 </div>
 `;
+
+exports[`Storyshots ListItem High importance 1`] = `
+<div
+  className="sc-htpNat hQFVUU"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Check"
+  />
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ListItem High importance Done 1`] = `
+<div
+  className="sc-htpNat kyiCyg"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Uncheck"
+  >
+    <i
+      className="material-icons"
+    >
+      check
+    </i>
+  </button>
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ListItem Low importance 1`] = `
+<div
+  className="sc-htpNat eoJELI"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Check"
+  />
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ListItem Low importance Done 1`] = `
+<div
+  className="sc-htpNat jQwDyA"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Uncheck"
+  >
+    <i
+      className="material-icons"
+    >
+      check
+    </i>
+  </button>
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ListItem Medium importance 1`] = `
+<div
+  className="sc-htpNat fXKHFb"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Check"
+  />
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ListItem Medium importance Done 1`] = `
+<div
+  className="sc-htpNat eiagjU"
+>
+  <button
+    className="sc-bwzfXH gYGdCJ"
+    onClick={[Function]}
+    title="Uncheck"
+  >
+    <i
+      className="material-icons"
+    >
+      check
+    </i>
+  </button>
+  <p
+    className="sc-bdVaJa GIwGB"
+  >
+     
+    I have to do this !
+     
+  </p>
+  <button
+    className="sc-bxivhb eFxSth"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+    >
+      delete
+    </i>
+  </button>
+</div>
+`;

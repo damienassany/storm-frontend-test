@@ -5,6 +5,7 @@ import { Importances } from '../../helpers/getListItemColor';
 
 const createProps = (item: Omit<Item, "id"|"title">): Props => ({
     update: () => null,
+    deleteTask: () => null,
     item: {
         ...item,
         id: '1111-2222-3333-4444',
