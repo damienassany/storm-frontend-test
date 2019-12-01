@@ -48,7 +48,8 @@
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
     "db:seed": "node_modules/.bin/sequelize db:seed:all",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "npm run db:create"
   },
   "eslintConfig": {
     "extends": "react-app"

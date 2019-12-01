@@ -1,4 +1,4 @@
-import { ItemFromApi, Item } from "../../../shared/components/ListItem/ListItem.component";
+import { ItemFromApi } from "../../../shared/components/ListItem/ListItem.component";
 import { Service } from "../../../shared/helpers/service";
 import { todoListStore } from "../../../stores/TodoList.store";
 import { addTodoFormStore } from "../../../stores/AddTodoForm.store";
@@ -9,7 +9,7 @@ class TodoListService extends Service<ItemFromApi> {
     }
 
     public fetchTasks = () => {        
-        this.getAll(_tasks => {
+        this.getAll(_tasks => {            
             const tasks = _tasks.map(task => ({
                 ...task,
                 isDone: task.isDone === "true"

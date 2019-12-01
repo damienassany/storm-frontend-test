@@ -17,6 +17,7 @@ It can be built on the command line:
 | set up | `npm i`
 | run api and dev server | `npm start` |
 | run unit tests | `npm t` |
+| run storybook | `npm run storybook` |
 
 We'll ask you to implement features task-by-task, but here is an overview of the full test API that you'll be building against:
 

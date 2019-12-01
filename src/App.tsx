@@ -4,7 +4,6 @@ import stores from './stores';
 import { TodoListContainer } from './modules/TodoList/containers/TodoList.container';
 import { LoaderContainer } from './shared/containers/Loader/Loader.container';
 import styled from 'styled-components';
-import { Importances } from './shared/helpers/getListItemColor';
 import { Row } from './shared/components/Row';
 import { AddTodoFormContainer } from './modules/TodoList/containers/AddTodoFormContainer';
 

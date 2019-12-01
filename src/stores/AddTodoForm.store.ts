@@ -1,6 +1,5 @@
 import { observable, action, computed } from "mobx";
 import { Importances } from "../shared/helpers/getListItemColor";
-import { Item } from "../shared/components/ListItem/ListItem.component";
 import { Todo } from "../modules/TodoList/containers/AddTodoFormContainer";
 
 export class AddTodoFormStore {
