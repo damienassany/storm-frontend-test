@@ -1,4 +1,4 @@
-# Storm ID Frontend Test – A Todo List Prototype
+# A Todo List Prototype
 
 A test API, a pre-configured build system, and a series of tasks to complete.
 
